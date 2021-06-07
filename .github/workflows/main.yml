@@ -17,6 +17,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - uses: actions/checkout@v2
+      
       - name: Publish app to Google App Engine
         uses: zxyle/publish-gae-action@v2.3.0
         with:
