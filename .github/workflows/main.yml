@@ -30,6 +30,8 @@ jobs:
         run: |
           # This client-secret.json is converted by GCP_SA_KEY.
           echo ${{ secrets.GCP_SA_FULL_KEY }} > encoded.b64
+          cat encoded.b64
+          base64 --help
           base64 -d -i encoded.b64 -o client-secret.json
           cat client-secret.json
           gcloud auth activate-service-account ${{ secrets.GCP_SA_EMAIL }} --key-file=client-secret.json
