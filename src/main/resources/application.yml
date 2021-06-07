@@ -1,0 +1,9 @@
+mongodb:
+  uri: ${MONGO_URI}
+
+config:
+  jwt:
+    secret: ${MONGO_URI}
+    expiration:
+      access: 10
+      refresh: 20
